@@ -33,15 +33,17 @@ app.get("/scrape", function(req, res) {
     console.log("made it here");
     $("article.js_post_item").each(function(i, element) {
 
-      var headline = $(element).text();
-      // var summary = $(element).text();
-      // var urlLink = $(element).text();
+      var headline = $(element).find("div.sc-3kpz0l-7").find("a").find("h1").text();
+      var summary = $(element).find("div.sc-3kpz0l-6").find("div.b8i51y-0").find("p").text();
+      var urlLink = $(element).find("div.sc-3kpz0l-7").find("a").attr("href");
 
-      if (headline) {//&& summary && urlLink
+      if (headline && summary && urlLink) {
         
       
         db.scrapedData.insert({
-          headline: headline
+          headline: headline,
+          summary: summary,
+          urlLink: urlLink
         },
         function(err, inserted) {
           if (err) {
@@ -56,6 +58,8 @@ app.get("/scrape", function(req, res) {
       }
     });
   });
+
+  res.send("Scrape Complete");
 })
 
 app.listen(3000, function() {
