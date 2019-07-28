@@ -11,7 +11,7 @@ module.exports = controller = {
     axios.get("https://kotaku.com/").then(function(response) {
     const $ = cheerio.load(response.data);
 
-      $("article.js_post_item").each( function (i, element){
+      $("article.js_post_item").each(function (i, element){
 
         const result = {};
         
