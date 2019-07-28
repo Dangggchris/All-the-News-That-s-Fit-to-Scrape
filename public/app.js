@@ -16,7 +16,6 @@ $(document).on("click", "#kotakuScrapeButton", () => {
   alert("Kotaku scrape complete!");
 })
 
-// <a data-id="' + articleData[i]._id + '"data-toggle="modal" data-target="#exampleModal" class="ml-4 btn btn-primary article_a" id="addComment">Add Comment</a>
 $.getJSON("/articles", (articleData) => {
   for (var i = 0; i < articleData.length; i++) {
     $("#articles").
