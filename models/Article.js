@@ -1,7 +1,7 @@
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-var ArticleSchema = new Schema({
+const ArticleSchema = new Schema({
   
   headline: {
     type: String,
@@ -14,11 +14,6 @@ var ArticleSchema = new Schema({
   urlLink: {
     type: String,
     required: true
-  },
-
-  note: {
-    type: Schema.Types.ObjectId,
-    ref: "Note"
   }
 });
 
