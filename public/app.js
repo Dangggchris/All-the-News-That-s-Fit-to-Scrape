@@ -19,7 +19,7 @@ $(document).on("click", "#kotakuScrapeButton", () => {
 $.getJSON("/articles", (articleData) => {
   for (var i = 0; i < articleData.length; i++) {
     $("#articles").
-    prepend('<div class="mb-4"><h3>' + articleData[i].headline + '</h3><p>' + articleData[i].summary + '</p><a class="btn btn-primary article_a" href="' + articleData[i].urlLink + '" target="blank">Read More</a><a data-id="' + articleData[i]._id + '" class="ml-4 btn btn-primary article_a" id="deleteArticle">Delete Article</a></div>');
+    append('<div class="mb-4"><h3>' + articleData[i].headline + '</h3><p>' + articleData[i].summary + '</p><a class="btn btn-primary article_a" href="' + articleData[i].urlLink + '" target="blank">Read More</a><a data-id="' + articleData[i]._id + '" class="ml-4 btn btn-primary article_a" id="deleteArticle">Delete Article</a></div>');
   }
 });
 
