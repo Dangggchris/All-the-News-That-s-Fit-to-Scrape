@@ -9,8 +9,6 @@ router.get("/scrape", controller.kotakuScrape);
 
 router.get("/articles", controller.kotakuArticles);
 
-router.get("/articles/:id", controller.oneArticle);
-
 router.delete("/articles/:id", controller.deleteArticle);
 
 module.exports = router;
