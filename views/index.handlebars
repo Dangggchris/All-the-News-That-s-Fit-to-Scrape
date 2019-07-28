@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to Kotaku Scraping</h1>
+      <p class="lead">For all your nerdy articles needs</p>
+      <hr class="my-4">
+      <p>Click below to scrape latest articles!</p>
+      <button class="btn btn-primary btn-lg" id="kotakuScrapeButton">Scrape Kotaku</button>
+  </div>
+</div>
+
+<div class="container">
+  <div id="articles"></div>
+</div>
+
+
+  <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="float-right mr-1" aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body p-4">
+          <div id="addNote"></div>
+          <div id="notesH3"></div>
+          <div id="notes"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="app.js"></script>
